@@ -1,0 +1,24 @@
+name: pclake
+
+channels:
+   - conda-forge
+dependencies:
+  - r-irkernel
+  - r-desolve
+  - r-rjava
+  - r-reshape2
+  - r-ggplot2
+  - r-xlconnect
+  - r-readxl
+  - r-plyr
+  - r-tidyr
+
+# mamba env update --file Qing-environment.yaml
+# source ~/.bashrc
+# condaenv list
+# conda activate pclake
+# R
+
+
+# minio objsect store: https://scruffy.lab.uvalight.net:9001/login
+# anaconda engine search: https://anaconda.org/search?q=desolve
