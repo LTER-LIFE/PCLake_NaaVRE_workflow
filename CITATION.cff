@@ -1,0 +1,43 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: PCLake_NaaVRE
+message: Running PClake+ in a virtual lab
+type: software
+authors:
+  - given-names: Qing
+    family-names: ' Zhan'
+    email: qing.zhan@nioz.nl
+    affiliation: Royal Netherlands Institute for Sea Research
+    orcid: 'https://orcid.org/0000-0002-1339-3646'
+  - given-names: Stanley
+    family-names: Nmor
+    orcid: 'https://orcid.org/0000-0002-3918-1422'
+    email: stanley.nmor@nioz.nl
+    affiliation: Royal Netherlands Institute for Sea Research
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.17415936
+    description: GLEON2025 workshop version
+repository-code: 'https://github.com/NIOZ-QingZ/PCLake_NaaVRE'
+url: 'https://beta.naavre.net/vreapp/vl/pclake'
+abstract: >
+  PCLake is a process-based freshwater ecosystem model. To
+  make PCLake+ readily accessible for collaborative
+  research, PCLake is onboarded into a cloud-based virtual
+  research environment. The platform includes a
+  pre-configured Docker image with the modified PCLake
+  source code, enabling users to launch fully functional
+  instances without local installation. Each virtual-lab
+  instance ships with Jupyter notebooks that provide
+  interactive tutorials, parameter exploration, and result
+  visualization. In addition, reproducible workflow are
+  supplied to run batch scenarios and exploit parallel
+  execution on cloud resources, dramatically reducing
+  simulation time for large ensembles. This virtual research
+  environment lowers technical barriers and promotes
+  reproducibility.
+keywords:
+  - Virtual lab
+  - Lake ecosystem modelling
