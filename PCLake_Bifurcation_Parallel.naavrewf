@@ -1,0 +1,582 @@
+{
+  "chart": {
+    "offset": {
+      "x": 262.99,
+      "y": 280.92
+    },
+    "scale": 0.48,
+    "nodes": {
+      "4213aae4-daed-4329-9a46-9f8ba2c9a2e1": {
+        "id": "4213aae4-daed-4329-9a46-9f8ba2c9a2e1",
+        "position": {
+          "x": 545.3793947625268,
+          "y": 588.911096438978
+        },
+        "orientation": 0,
+        "type": "splitter",
+        "ports": {
+          "splitter_source": {
+            "id": "splitter_source",
+            "type": "left",
+            "properties": {
+              "color": "#86642d",
+              "parentNodeType": "splitter"
+            },
+            "position": {
+              "x": -2,
+              "y": 30
+            }
+          },
+          "splitter_target": {
+            "id": "splitter_target",
+            "type": "right",
+            "properties": {
+              "color": "#5940bf",
+              "parentNodeType": "splitter"
+            },
+            "position": {
+              "x": 202,
+              "y": 30
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "splitter",
+            "title": "Splitter",
+            "description": "Split the input list and distribute its items to multiple containers that run in parallel.",
+            "type": "splitter",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
+            "version": 1,
+            "next_version": null,
+            "container_image": "",
+            "base_container_image": {
+              "build": "",
+              "runtime": ""
+            },
+            "dependencies": [],
+            "inputs": [
+              {
+                "name": "splitter_source",
+                "type": "list"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "splitter_target",
+                "type": "list"
+              }
+            ],
+            "confs": [],
+            "params": [],
+            "secrets": []
+          }
+        },
+        "size": {
+          "width": 202,
+          "height": 61
+        }
+      },
+      "253a541a-499d-457c-878d-218bde79b1af": {
+        "id": "253a541a-499d-457c-878d-218bde79b1af",
+        "position": {
+          "x": 946.1559014869898,
+          "y": 596.5613382899636
+        },
+        "orientation": 0,
+        "type": "merger",
+        "ports": {
+          "merger_source": {
+            "id": "merger_source",
+            "type": "left",
+            "properties": {
+              "color": "#1f9384",
+              "parentNodeType": "merger"
+            },
+            "position": {
+              "x": -2,
+              "y": 30
+            }
+          },
+          "merger_target": {
+            "id": "merger_target",
+            "type": "right",
+            "properties": {
+              "color": "#562d86",
+              "parentNodeType": "merger"
+            },
+            "position": {
+              "x": 202,
+              "y": 30
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "merger",
+            "title": "Merger",
+            "description": "Merge the output of multiple containers back into a single list.",
+            "type": "merger",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
+            "version": 1,
+            "next_version": null,
+            "container_image": "",
+            "base_container_image": {
+              "build": "",
+              "runtime": ""
+            },
+            "dependencies": [],
+            "inputs": [
+              {
+                "name": "merger_source",
+                "type": "list"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "merger_target",
+                "type": "list"
+              }
+            ],
+            "confs": [],
+            "params": [],
+            "secrets": []
+          }
+        },
+        "size": {
+          "width": 202,
+          "height": 61
+        }
+      },
+      "146a4c4c-d14c-4405-a731-1f7bd274bb12": {
+        "id": "146a4c4c-d14c-4405-a731-1f7bd274bb12",
+        "position": {
+          "x": 293.4237747771669,
+          "y": 451.9387550056694
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "Bifur_PLoads": {
+            "id": "Bifur_PLoads",
+            "type": "right",
+            "properties": {
+              "color": "#c579d2",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 30
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/4cc3eec5-c1cb-4808-9fa5-b7111c4e49de/",
+            "owner": "zhanqing2016@gmail.com",
+            "virtual_lab": "waddenzee-proto-dt",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-lter-life-wadden-cell-build:v0.0.37",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-lter-life-wadden-cell-runtime:v0.0.37"
+            },
+            "dependencies": [
+              {
+                "name": "os",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "shutil",
+                "module": "",
+                "asname": null
+              },
+              {
+                "name": "numpy",
+                "module": "",
+                "asname": "np"
+              }
+            ],
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "Bifur_PLoads",
+                "type": "list"
+              }
+            ],
+            "confs": [],
+            "params": [
+              {
+                "name": "end_PLoad",
+                "type": "float",
+                "default_value": null
+              },
+              {
+                "name": "num_elements",
+                "type": "int",
+                "default_value": null
+              },
+              {
+                "name": "start_PLoad",
+                "type": "float",
+                "default_value": null
+              }
+            ],
+            "secrets": [],
+            "title": "cell1-pclake-rep-clone-zhanqing2016-gmail-com",
+            "description": "cell1-pclake-rep-clone-zhanqing2016-gmail-com",
+            "created": "2025-11-12T12:04:18.859572Z",
+            "modified": "2025-11-12T12:04:19.155508Z",
+            "version": 1,
+            "container_image": "ghcr.io/naavre/cells-vl-waddenzee-proto-dt/cell1-pclake-rep-clone-zhanqing2016-gmail-com:0d2717b",
+            "kernel": "ipython",
+            "source_url": "https://github.com/NaaVRE/cells-vl-waddenzee-proto-dt/tree/e43c9f0364935ff02f190d2151cc683d216d6902/cell1-pclake-rep-clone-zhanqing2016-gmail-com",
+            "next_version": null
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 61
+        }
+      },
+      "2ae91cf5-aac8-4efc-a0d5-2b81aca44a8d": {
+        "id": "2ae91cf5-aac8-4efc-a0d5-2b81aca44a8d",
+        "position": {
+          "x": 682.127171814672,
+          "y": 455.5019305019304
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "Bifur_PLoads": {
+            "id": "Bifur_PLoads",
+            "type": "left",
+            "properties": {
+              "color": "#c579d2",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 30
+            }
+          },
+          "bifur_output": {
+            "id": "bifur_output",
+            "type": "right",
+            "properties": {
+              "color": "#6cb5e0",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 30
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/1ed14e2b-c8f0-4724-8878-16f7387fb0eb/",
+            "owner": "zhanqing2016@gmail.com",
+            "virtual_lab": "waddenzee-proto-dt",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-pclake-cell-build:v0.0.37",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-pclake-cell-runtime:v0.0.37"
+            },
+            "dependencies": [],
+            "inputs": [
+              {
+                "name": "Bifur_PLoads",
+                "type": "list"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "bifur_output",
+                "type": "list"
+              }
+            ],
+            "confs": [],
+            "params": [],
+            "secrets": [],
+            "title": "cell-2-pclake-bifurcation-zhanqing2016-gmail-com",
+            "description": "cell-2-pclake-bifurcation-zhanqing2016-gmail-com",
+            "created": "2025-11-12T13:17:08.893372Z",
+            "modified": "2025-11-12T13:17:09.152860Z",
+            "version": 3,
+            "container_image": "ghcr.io/naavre/cells-vl-waddenzee-proto-dt/cell-2-pclake-bifurcation-zhanqing2016-gmail-com:376e6c7",
+            "kernel": "IRkernel",
+            "source_url": "https://github.com/NaaVRE/cells-vl-waddenzee-proto-dt/tree/12814eff14aa97760d1abacae151813c335d7110/cell-2-pclake-bifurcation-zhanqing2016-gmail-com",
+            "next_version": null
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 61
+        }
+      },
+      "bdaf8901-c7d1-4209-a456-72d3b3fc16ce": {
+        "id": "bdaf8901-c7d1-4209-a456-72d3b3fc16ce",
+        "position": {
+          "x": 1068.227557915058,
+          "y": 459.36293436293437
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "bifur_output": {
+            "id": "bifur_output",
+            "type": "left",
+            "properties": {
+              "color": "#6cb5e0",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 30
+            }
+          },
+          "combined_df_filename": {
+            "id": "combined_df_filename",
+            "type": "right",
+            "properties": {
+              "color": "#2dd267",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": 252,
+              "y": 30
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/5529a696-d1b1-42c1-8f17-4602459789d0/",
+            "owner": "zhanqing2016@gmail.com",
+            "virtual_lab": "waddenzee-proto-dt",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-lter-life-wadden-cell-build:v0.0.37",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-lter-life-wadden-cell-runtime:v0.0.37"
+            },
+            "dependencies": [
+              {
+                "name": "devtools",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "ggplot2",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "minioclient",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "processx",
+                "module": "",
+                "asname": ""
+              }
+            ],
+            "inputs": [
+              {
+                "name": "bifur_output",
+                "type": "list"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "combined_df_filename",
+                "type": "str"
+              }
+            ],
+            "confs": [],
+            "params": [],
+            "secrets": [],
+            "title": "cell3-print-bifurcation-results-zhanqing2016-gmail-com",
+            "description": "cell3-print-bifurcation-results-zhanqing2016-gmail-com",
+            "created": "2025-11-12T12:04:05.344033Z",
+            "modified": "2025-11-12T12:54:24.011105Z",
+            "version": 1,
+            "container_image": "ghcr.io/naavre/cells-vl-waddenzee-proto-dt/cell3-print-bifurcation-results-zhanqing2016-gmail-com:8c5157f",
+            "kernel": "IRkernel",
+            "source_url": "https://github.com/NaaVRE/cells-vl-waddenzee-proto-dt/tree/04d026f2a4af95bc52d952a70c4b3fdbc92ee39a/cell3-print-bifurcation-results-zhanqing2016-gmail-com",
+            "next_version": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/24ee6ec3-bf0f-4dc9-a0fb-d4a53952c0f8/"
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 61
+        }
+      },
+      "3f55bd69-5d07-4896-aaa7-6825454ee890": {
+        "id": "3f55bd69-5d07-4896-aaa7-6825454ee890",
+        "position": {
+          "x": 1426.9791666666665,
+          "y": 453.72425997426
+        },
+        "orientation": 0,
+        "type": "workflow-cell",
+        "ports": {
+          "combined_df_filename": {
+            "id": "combined_df_filename",
+            "type": "left",
+            "properties": {
+              "color": "#2dd267",
+              "parentNodeType": "workflow-cell"
+            },
+            "position": {
+              "x": -2,
+              "y": 30
+            }
+          }
+        },
+        "properties": {
+          "cell": {
+            "url": "https://beta.naavre.net/naavre-catalogue-service/workflow-cells/319afce4-4fb3-4d0d-87e0-7bf01f70b31a/",
+            "owner": "zhanqing2016@gmail.com",
+            "virtual_lab": "waddenzee-proto-dt",
+            "shared_with_scopes": [],
+            "shared_with_users": [],
+            "base_container_image": {
+              "build": "ghcr.io/naavre/flavors/naavre-fl-pclake-cell-build:v0.0.37",
+              "runtime": "ghcr.io/naavre/flavors/naavre-fl-pclake-cell-runtime:v0.0.37"
+            },
+            "dependencies": [
+              {
+                "name": "devtools",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "ggplot2",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "minioclient",
+                "module": "",
+                "asname": ""
+              },
+              {
+                "name": "processx",
+                "module": "",
+                "asname": ""
+              }
+            ],
+            "inputs": [
+              {
+                "name": "combined_df_filename",
+                "type": "str"
+              }
+            ],
+            "outputs": [],
+            "confs": [],
+            "params": [
+              {
+                "name": "param_s3_user_prefix",
+                "type": "str",
+                "default_value": null
+              },
+              {
+                "name": "param_s3_server",
+                "type": "str",
+                "default_value": null
+              }
+            ],
+            "secrets": [
+              {
+                "name": "secret_s3_access_key",
+                "type": "str"
+              },
+              {
+                "name": "secret_s3_secret_key",
+                "type": "str"
+              }
+            ],
+            "title": "cell4-print-bifurcation-results-zhanqing2016-gmail-com",
+            "description": "cell4-print-bifurcation-results-zhanqing2016-gmail-com",
+            "created": "2025-11-12T12:53:52.497759Z",
+            "modified": "2025-11-12T12:53:52.898353Z",
+            "version": 2,
+            "container_image": "ghcr.io/naavre/cells-vl-waddenzee-proto-dt/cell4-print-bifurcation-results-zhanqing2016-gmail-com:9076459",
+            "kernel": "IRkernel",
+            "source_url": "https://github.com/NaaVRE/cells-vl-waddenzee-proto-dt/tree/2a3c4e4410a40db6fffebfbb48d0657007b0f20a/cell4-print-bifurcation-results-zhanqing2016-gmail-com",
+            "next_version": null
+          }
+        },
+        "size": {
+          "width": 252,
+          "height": 61
+        }
+      }
+    },
+    "links": {
+      "aa126236-0e75-4f7d-9737-1654a6cdd44d": {
+        "id": "aa126236-0e75-4f7d-9737-1654a6cdd44d",
+        "from": {
+          "nodeId": "146a4c4c-d14c-4405-a731-1f7bd274bb12",
+          "portId": "Bifur_PLoads"
+        },
+        "to": {
+          "nodeId": "4213aae4-daed-4329-9a46-9f8ba2c9a2e1",
+          "portId": "splitter_source"
+        }
+      },
+      "1c07bd8b-c640-40ef-9658-b1d1e7e572f8": {
+        "id": "1c07bd8b-c640-40ef-9658-b1d1e7e572f8",
+        "from": {
+          "nodeId": "4213aae4-daed-4329-9a46-9f8ba2c9a2e1",
+          "portId": "splitter_target"
+        },
+        "to": {
+          "nodeId": "2ae91cf5-aac8-4efc-a0d5-2b81aca44a8d",
+          "portId": "Bifur_PLoads"
+        }
+      },
+      "a376d9da-1183-4953-825d-27f46cf056fc": {
+        "id": "a376d9da-1183-4953-825d-27f46cf056fc",
+        "from": {
+          "nodeId": "2ae91cf5-aac8-4efc-a0d5-2b81aca44a8d",
+          "portId": "bifur_output"
+        },
+        "to": {
+          "nodeId": "253a541a-499d-457c-878d-218bde79b1af",
+          "portId": "merger_source"
+        }
+      },
+      "b39337b3-1c51-4e12-815b-b6c0d39aca98": {
+        "id": "b39337b3-1c51-4e12-815b-b6c0d39aca98",
+        "from": {
+          "nodeId": "253a541a-499d-457c-878d-218bde79b1af",
+          "portId": "merger_target"
+        },
+        "to": {
+          "nodeId": "bdaf8901-c7d1-4209-a456-72d3b3fc16ce",
+          "portId": "bifur_output"
+        }
+      },
+      "983846db-7aec-4673-8e65-abe818ef55b7": {
+        "id": "983846db-7aec-4673-8e65-abe818ef55b7",
+        "from": {
+          "nodeId": "bdaf8901-c7d1-4209-a456-72d3b3fc16ce",
+          "portId": "combined_df_filename"
+        },
+        "to": {
+          "nodeId": "3f55bd69-5d07-4896-aaa7-6825454ee890",
+          "portId": "combined_df_filename"
+        }
+      }
+    },
+    "selected": {},
+    "hovered": {}
+  }
+}
